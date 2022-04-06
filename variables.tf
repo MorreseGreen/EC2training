@@ -14,16 +14,20 @@ variable "vpc_name" {
   type        = string
 }
 
-variable "ec2_type{
+variable "ec2_type" {
   description = "Type of ec2 instance"
-  type = string 
-  default = "t2.small"
+  type        = string
+  default     = "t2.small"
 }
 
-variable "my_keypair"{
- default = "aws_keypair"
+variable "my_keypair" {
+  default = "aws_keypair"
 }
 
 variable "number_of_instances" {
-    description = "Amount of instances for my public subnet"
+  description = "Amount of instances for my public subnet"
+}
+
+variable "public_subnet_name" {
+  type = string
 }
